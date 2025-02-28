@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 const fakeDb: { [key: string]: { bio: string; name: string } } = {};
 
 @Injectable()
-export class ProfileService {
+export class AppService {
   async getProfile(address: string) {
     return fakeDb[address];
   }
