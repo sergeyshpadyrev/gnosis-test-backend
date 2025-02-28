@@ -1,14 +1,15 @@
 import { Injectable } from '@nestjs/common';
-
-const fakeDb: { [key: string]: { bio: string; name: string } } = {};
+import { DatabaseService } from './database.service';
 
 @Injectable()
 export class AppService {
+  constructor(private databaseService: DatabaseService) {}
+
   async getProfile(address: string) {
-    return fakeDb[address];
+    return this.databaseService.readProfile(address);
   }
 
   async updateProfile(props: { address: string; bio: string; name: string }) {
-    fakeDb[props.address] = { bio: props.bio, name: props.name };
+    await this.databaseService.updateProfile(props.address, props.bio, props.name);
   }
 }

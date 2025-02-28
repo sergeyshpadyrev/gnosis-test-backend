@@ -1,6 +1,6 @@
 import { AppService } from './app.service';
 import { AuthRequired, User, UserType } from './auth';
-import { Body, Controller, Get, NotFoundException, Put } from '@nestjs/common';
+import { Body, Controller, Get, Put } from '@nestjs/common';
 
 @Controller('/')
 export class AppController {

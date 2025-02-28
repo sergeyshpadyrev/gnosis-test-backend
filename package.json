@@ -21,10 +21,13 @@
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.0",
     "@nestjs/core": "^11.0.1",
     "@nestjs/passport": "^11.0.5",
     "@nestjs/platform-express": "^11.0.1",
+    "dotenv": "^16.4.7",
     "ethers": "^6.13.5",
+    "node-fetch": "^3.3.2",
     "passport": "^0.7.0",
     "passport-custom": "^1.1.1",
     "reflect-metadata": "^0.2.2",

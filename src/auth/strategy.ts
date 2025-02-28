@@ -31,7 +31,7 @@ export class SiweStrategy extends PassportStrategy(Strategy, 'siwe') {
       });
       if (!verified.success) throw new UnauthorizedException();
 
-      return { user: { address: siweMessage.address } };
+      return { address: siweMessage.address };
     } catch (e) {
       throw new UnauthorizedException();
     }
