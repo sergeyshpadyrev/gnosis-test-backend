@@ -6,7 +6,7 @@ import { Body, Controller, Get, Put } from '@nestjs/common';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('/')
+  @Get('/api')
   async getHealthCheck() {
     return { status: 'ok' };
   }
