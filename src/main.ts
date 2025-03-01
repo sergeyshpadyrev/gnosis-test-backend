@@ -11,9 +11,8 @@ async function bootstrap() {
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
   app.enableCors({ origin: '*' });
-
-  await app.listen(3000);
+  await app.init();
 }
 
 bootstrap();
-module.exports = server;
+export default server;
