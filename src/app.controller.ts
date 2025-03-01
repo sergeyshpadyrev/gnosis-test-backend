@@ -6,6 +6,11 @@ import { Body, Controller, Get, Put } from '@nestjs/common';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get('/health/check')
+  async getHealthCheck() {
+    return { statusCode: 200 };
+  }
+
   @AuthRequired()
   @Get('/profile')
   async getProfile(@User() user: UserType) {
