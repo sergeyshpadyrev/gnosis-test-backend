@@ -7,11 +7,16 @@ on:
 
 jobs:
   deploy:
-    runs-on: node-22
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
       - name: Install packages
         run: yarn install --frozen-lockfile
