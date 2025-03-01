@@ -2,13 +2,13 @@ import { AppService } from './app.service';
 import { AuthRequired, User, UserType } from './auth';
 import { Body, Controller, Get, Put } from '@nestjs/common';
 
-@Controller('/')
+@Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get('/')
   async getHealthCheck() {
-    return { statusCode: 200 };
+    return { status: 'ok' };
   }
 
   @AuthRequired()
