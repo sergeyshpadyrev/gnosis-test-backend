@@ -10,14 +10,14 @@ Install dependencies:
 yarn install
 ```
 
-Create `.env` file with env variables for [jsonbin.io](https://jsonbin.io):
+Create `.env` file with a master key and bin ID for [jsonbin.io](https://jsonbin.io):
 
 ```
 BIN_ID=...
 BIN_KEY=...
 ```
 
-Because it's just a home-take assignment but not a real app, for convenience I will just post the secret keys here:
+Because it's just a home-take assignment but not a real app, for convenience I will just post my secret keys here so you can use them:
 
 ```
 BIN_ID=67c1f35fad19ca34f81427be
