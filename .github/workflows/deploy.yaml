@@ -25,4 +25,4 @@ jobs:
         run: yarn build
 
       - name: Deploy to Vercel
-        run: ./node_modules/.bin/vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: ./node_modules/.bin/vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
