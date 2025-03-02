@@ -12,6 +12,12 @@ async function bootstrap() {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.enableCors({ origin: '*' });
   await app.init();
+
+  if (process.env.ENV === 'local') {
+    const port = 3000;
+    await app.listen(port);
+    console.log(`Server is running on port ${port}`);
+  }
 }
 
 bootstrap();

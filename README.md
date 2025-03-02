@@ -15,7 +15,7 @@ It uses
 ## Installation
 
 ```sh
-yarn install
+yar
 ```
 
 ## Configuration
@@ -25,6 +25,7 @@ Create `.env` file in the root of the project with a master key and bin ID from 
 ```
 BIN_ID=...
 BIN_KEY=...
+ENV=local
 ```
 
 You can use the secret keys I provided in the email.
@@ -32,5 +33,5 @@ You can use the secret keys I provided in the email.
 ## Running locally
 
 ```sh
-yarn dev
+yarn start
 ```
